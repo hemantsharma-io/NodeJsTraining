@@ -1,0 +1,18 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h1>Total users: {{totalUsers}}</h1>
+    <div id="users">
+        {{#each users}}
+            <div>
+                <span>Name: {{name}}</span> <a href='userDetails?userId={{id}}'>details</a>
+            </div>
+        {{/each}}
+    </div>
+</body>
+
+</html>
