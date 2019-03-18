@@ -10,7 +10,13 @@ MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client)=> {
     }
     const db = client.db(database);
     db.collection('users').insertOne({
-        'name':'Hemant Sharma',
+        'name':'Jen Sharma',
         'role':'Architect'
+    }, (error, result)=> {
+        if(error){
+            return console.log('error inserting users');
+        }
+
+        console.log(result.ops);
     });
 });
